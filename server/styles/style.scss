@@ -105,8 +105,10 @@ main {
     width: 175px;
     height: 125px;
     float: left;
-    text-align: center;
-    padding-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
   }
 
   .image {
