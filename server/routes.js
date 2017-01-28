@@ -14,6 +14,7 @@ const routes = POSTS.map(post => (
   <Route
     path={generatePostUrl(post.config.timestamp, post.config.title)}
     component={post.default}
+    key={post.config.timestamp}
   />
 ));
 

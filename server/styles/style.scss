@@ -45,9 +45,15 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -2px;
-    cursor: pointer;
     align-self: center;
     text-align: center;
+
+    a {
+      &:link,
+      &:visited {
+        color: $swatch02;
+      }
+    }
 
     @media all and (min-width: $header-large-breakpoint) {
       align-self: initial;

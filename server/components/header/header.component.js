@@ -4,7 +4,9 @@ import { Link } from 'react-router';
 export default function Header() {
   return (
     <header>
-      <div className="title">Randomness in Code</div>
+      <div className="title">
+        <Link to="/">Randomness in Code</Link>
+      </div>
       <div className="links">
         <Link to="/" className="link">Home</Link>
         <a href="https://resume.dylants.com" className="link">Resume</a>
