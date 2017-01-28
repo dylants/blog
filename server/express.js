@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
@@ -9,6 +10,9 @@ const logger = require('./lib/logger')();
 
 // Create the express application
 const app = express();
+
+// serve the static assets (js/css)
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 app.get('*', (req, res) => {
   match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
