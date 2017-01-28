@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import _ from 'lodash';
 import moment from 'moment';
 import slugify from 'slugify';
@@ -15,4 +17,21 @@ export function generateSample(text) {
     length: 400,
     separator: ' ',
   });
+}
+
+export function getPostFileNames() {
+  const files = fs.readdirSync(path.join(__dirname, '../posts'));
+  return _.chain(files)
+    // only get the posts
+    .filter(f => _.endsWith(f, '.js'))
+    // sort by newest first
+    .sortBy().reverse()
+    .value();
+}
+
+export function getPosts() {
+  const fileNames = getPostFileNames();
+  return fileNames.map(fileName => (
+    require(path.join(__dirname, '../posts', fileName))
+  ));
 }

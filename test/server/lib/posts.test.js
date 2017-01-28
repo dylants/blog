@@ -1,5 +1,7 @@
-import should from 'should';
+import _ from 'lodash';
 import lorem from 'lorem-ipsum';
+import moment from 'moment';
+import should from 'should';
 
 describe('The posts library', () => {
   let postsLib;
@@ -45,7 +47,7 @@ describe('The posts library', () => {
       let text;
 
       beforeEach(() => {
-        text = lorem({ count: 2, units: 'paragraphs' });
+        text = lorem({ count: 5, units: 'paragraphs' });
       });
 
       it('should return a truncated text', () => {
@@ -55,6 +57,41 @@ describe('The posts library', () => {
       it('should end with ellipsis', () => {
         should(postsLib.generateSample(text).endsWith('...')).be.true();
       });
+    });
+  });
+
+  describe('getPostFileNames', () => {
+    let fileNames;
+
+    beforeEach(() => {
+      fileNames = postsLib.getPostFileNames();
+    });
+
+    it('should contain at least one entry', () => {
+      should(fileNames.length).be.above(0);
+    });
+
+    it('should be sorted with newest first', () => {
+      const firstMoment = moment(_.trimEnd(fileNames[0], '.js'), 'YYYYMMDD');
+      const secondMoment = moment(_.trimEnd(fileNames[1], '.js'), 'YYYYMMDD');
+
+      should(firstMoment.isAfter(secondMoment)).be.true();
+    });
+  });
+
+  describe('getPosts', () => {
+    let posts;
+
+    beforeEach(() => {
+      posts = postsLib.getPosts();
+    });
+
+    it('return a list of more than one', () => {
+      should(posts.length).be.above(0);
+    });
+
+    it('elements in the list should have a config', () => {
+      should(posts[0].config).ok();
     });
   });
 });

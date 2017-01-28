@@ -1,5 +1,2 @@
 env:
   mocha: true
-rules:
-  # this rule causes problems with initializing the library under test in a beforeEach
-  global-require: 0

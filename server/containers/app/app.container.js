@@ -14,14 +14,18 @@ export default function App({ children }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+        <link rel="stylesheet" href="/public/prettyprint.css" />
         <link rel="stylesheet" href="/public/style.css" />
 
         <link href="https://fonts.googleapis.com/css?family=Bitter:300,400" rel="stylesheet" />
+
       </head>
 
       <body>
         <Header />
         {children}
+
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" />
       </body>
     </html>
   );

@@ -3,3 +3,7 @@ extends: "airbnb"
 rules:
   # https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
   react/jsx-filename-extension: [1, { "extensions": [".js", ".jsx"] }]
+  # this rule causes problems with libraries and tests
+  global-require: 0
+  # this rule causes problems with libraries
+  import/no-dynamic-require: 0
