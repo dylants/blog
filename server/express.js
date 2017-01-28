@@ -3,17 +3,36 @@ import path from 'path';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
+import sassMiddleware from 'node-sass-middleware';
 
 import routes from './routes';
+
+const IS_DEVELOPMENT = process.env.NODE_ENV === 'development';
+const IS_PRODUCTION = process.env.NODE_ENV === 'production';
+const APP_ROOT = path.join(__dirname, '../');
 
 const logger = require('./lib/logger')();
 
 // Create the express application
 const app = express();
 
-// serve the static assets (js/css)
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
+if (IS_DEVELOPMENT) {
+  // in development mode, re-generate the css code from sass every request
+  app.use(sassMiddleware({
+    src: path.join(__dirname, 'styles'),
+    dest: path.join(APP_ROOT, 'public'),
+    debug: true,
+    outputStyle: 'compressed',
+    prefix: '/public',
+  }));
+}
 
+if (IS_PRODUCTION) {
+  // serve the static assets (js/css)
+  app.use('/public', express.static(path.join(APP_ROOT, 'public')));
+}
+
+// for all other requests, process them using react-router
 app.get('*', (req, res) => {
   match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
     if (error) {

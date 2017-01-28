@@ -12,7 +12,7 @@ export default function App({ children }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <link rel="stylesheet" href="/assets/style.css" />
+        <link rel="stylesheet" href="/public/style.css" />
 
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" type="text/css" />
       </head>
