@@ -24,6 +24,7 @@ if (IS_DEVELOPMENT) {
     debug: true,
     outputStyle: 'compressed',
     prefix: '/public',
+    force: true,
   }));
 }
 
