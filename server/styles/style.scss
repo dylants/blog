@@ -1,3 +1,80 @@
+@import './swatches';
+$body-breakpoint: 1000px;
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bitter', serif;
+  max-width: $body-breakpoint;
+
+  @media all and (min-width: $body-breakpoint) {
+    margin: 0 auto;
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+  &:link,
+  &:visited {
+    color: $swatch01;
+  }
+
+  &:hover,
+  &:active {
+    color: $swatch02;
+  }
+}
+
+// ---------------------------
+// -------- HEADER -----------
+// ---------------------------
+$header-large-breakpoint: 575px;
+
+header {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+
+  @media all and (min-width: $header-large-breakpoint) {
+    flex-direction: row;
+  }
+
+  .title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    cursor: pointer;
+    align-self: center;
+    text-align: center;
+
+    @media all and (min-width: $header-large-breakpoint) {
+      align-self: initial;
+      text-align: initial;
+      flex: 2;
+    }
+  }
+
+  .links {
+    align-self: center;
+    justify-content: space-around;
+    display: flex;
+    margin-top: 5px;
+
+    @media all and (min-width: $header-large-breakpoint) {
+      flex: 1;
+      margin-top: 0;
+    }
+  }
+
+  .link {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0 5px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
 }

@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 
+import Header from '../../components/header/header.component';
+
 export default function App({ children }) {
   return (
     <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -14,10 +16,11 @@ export default function App({ children }) {
 
         <link rel="stylesheet" href="/public/style.css" />
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Bitter:300,400" rel="stylesheet" />
       </head>
 
       <body>
+        <Header />
         {children}
       </body>
     </html>
