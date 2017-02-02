@@ -1,7 +1,9 @@
-import fs from 'fs';
-import path from 'path';
+import ReactDOMServer from 'react-dom/server';
 import _ from 'lodash';
+import cheerio from 'cheerio';
+import fs from 'fs';
 import moment from 'moment';
+import path from 'path';
 import slugify from 'slugify';
 
 export function generatePostUrl(timestamp, title) {
@@ -10,13 +12,6 @@ export function generatePostUrl(timestamp, title) {
 
 export function generateDisplayTimestamp(timestamp) {
   return moment(timestamp, 'YYYYMMDD').format('MMMM D, YYYY');
-}
-
-export function generateSample(text) {
-  return _.truncate(text, {
-    length: 400,
-    separator: ' ',
-  });
 }
 
 export function getPostFileNames() {
@@ -34,4 +29,19 @@ export function getPosts() {
   return fileNames.map(fileName => (
     require(path.join(__dirname, '../posts', fileName))
   ));
+}
+
+export function generateSample(component, marker) {
+  // generate the text from the component
+  const html = ReactDOMServer.renderToStaticMarkup(component());
+  const text = cheerio.load(html).text();
+
+  // remove the beginning up to the marker
+  const index = text.indexOf(marker);
+  const parsedText = text.slice(index + marker.length);
+
+  return _.truncate(parsedText, {
+    length: 400,
+    separator: ' ',
+  });
 }

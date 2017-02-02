@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import lorem from 'lorem-ipsum';
 import moment from 'moment';
 import should from 'should';
 
@@ -27,36 +26,6 @@ describe('The posts library', () => {
       should(
         postsLib.generateDisplayTimestamp('20160529'),
       ).equal('May 29, 2016');
-    });
-  });
-
-  describe('generateSample', () => {
-    describe('with short text', () => {
-      let text;
-
-      beforeEach(() => {
-        text = 'hey';
-      });
-
-      it('should return the same text', () => {
-        should(postsLib.generateSample(text)).equal('hey');
-      });
-    });
-
-    describe('with long text', () => {
-      let text;
-
-      beforeEach(() => {
-        text = lorem({ count: 5, units: 'paragraphs' });
-      });
-
-      it('should return a truncated text', () => {
-        should(postsLib.generateSample(text).length).be.belowOrEqual(400);
-      });
-
-      it('should end with ellipsis', () => {
-        should(postsLib.generateSample(text).endsWith('...')).be.true();
-      });
     });
   });
 
@@ -92,6 +61,24 @@ describe('The posts library', () => {
 
     it('elements in the list should have a config', () => {
       should(posts[0].config).ok();
+    });
+  });
+
+  describe('generateSample', () => {
+    let sample;
+
+    beforeEach(() => {
+      // yes, this might break one day.. but until then :)
+      const component = postsLib.getPosts()[0];
+      sample = postsLib.generateSample(component.default, component.config.displayTimestamp);
+    });
+
+    it('should return truncated text', () => {
+      should(sample.length).be.belowOrEqual(400);
+    });
+
+    it('should end with ellipsis', () => {
+      should(sample).endWith('...');
     });
   });
 });

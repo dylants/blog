@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import {
-  getPosts,
   generatePostUrl,
+  generateSample,
+  getPosts,
 } from '../../lib/posts';
 
 const POSTS = getPosts();
@@ -19,7 +20,7 @@ export default function Home() {
           </div>
           <div className="title">{config.title}</div>
           <div className="timestamp">{config.displayTimestamp}</div>
-          <p className="sample">{config.sample}</p>
+          <p className="sample">{generateSample(post.default, config.displayTimestamp)}</p>
         </div>
       </Link>
     );

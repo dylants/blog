@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {
-  generateSample,
   generateDisplayTimestamp,
 } from '../lib/posts';
 
@@ -16,7 +15,6 @@ export const config = {
   title: TITLE,
   timestamp: TIMESTAMP,
   displayTimestamp: DISPLAY_TIMESTAMP,
-  sample: generateSample('Web components aren’t exactly new, but their use is becoming more widely accepted. We’re no longer building pages with controllers and views that mix and match assets together, but rather seeing reusable components that separate pages share. Web developers are now being trained to draw boxes around parts of a page to build a sort of “Russian Doll” set of components. The idea of a component library for a suite of web applications is becoming easier to build, especially now that client side libraries and frameworks such as React and Angular 2 have positioned themselves to make components a first class citizen. '),
 };
 
 export default function Post() {

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {
-  generateSample,
   generateDisplayTimestamp,
 } from '../lib/posts';
 
@@ -16,7 +15,6 @@ export const config = {
   title: TITLE,
   timestamp: TIMESTAMP,
   displayTimestamp: DISPLAY_TIMESTAMP,
-  sample: generateSample('One of the most useful features of Angular, in my opinion, is the focus on testing your code. Structuring your apps to use dependency injection by default, along with an out-of-the-box solution for unit and integration tests, gives anyone a great head start in testing their client code. Using a similar solution on the server side, and wiring it all together with a tool like Grunt, provides you with complete testing of your web application.'),
 };
 
 export default function Post() {
