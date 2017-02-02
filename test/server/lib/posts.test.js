@@ -74,7 +74,7 @@ describe('The posts library', () => {
     });
 
     it('should return truncated text', () => {
-      should(sample.length).be.belowOrEqual(400);
+      should(sample.length).be.belowOrEqual(650);
     });
 
     it('should end with ellipsis', () => {

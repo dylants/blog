@@ -5,7 +5,10 @@ export default function Header() {
   return (
     <header>
       <div className="title">
-        <Link to="/">Randomness in Code</Link>
+        <Link to="/">
+          <div>Randomness in</div>
+          <div>Code</div>
+        </Link>
       </div>
       <div className="links">
         <Link to="/" className="link">Home</Link>

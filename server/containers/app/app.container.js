@@ -14,10 +14,13 @@ export default function App({ children }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+        <link rel="icon" href="https://s3.amazonaws.com/dylants-blog/public/images/prompt.png" />
+
         <link rel="stylesheet" href="/public/prettyprint.css" />
         <link rel="stylesheet" href="/public/style.css" />
 
-        <link href="https://fonts.googleapis.com/css?family=Bitter:300,400" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,500" rel="stylesheet" />
 
       </head>
 

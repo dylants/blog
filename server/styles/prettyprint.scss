@@ -55,5 +55,21 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   pre .atn, code .atn { color: #404; }
   pre .atv, code .atv { color: #060; }
 }
+
+
+pre {
+  .str {
+    color: #98c379;
+  }
+
+  .kwd {
+    color: #c678dd;
+  }
+
+  .typ {
+    color: #e06c75;
+  }
+}
+
 // sass-lint:enable-all
 

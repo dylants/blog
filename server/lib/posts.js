@@ -41,7 +41,7 @@ export function generateSample(component, marker) {
   const parsedText = text.slice(index + marker.length);
 
   return _.truncate(parsedText, {
-    length: 400,
+    length: 650,
     separator: ' ',
   });
 }
