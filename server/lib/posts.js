@@ -9,7 +9,12 @@ import slugify from 'slugify';
 import config from '../config';
 
 export function generatePostUrl(timestamp, title) {
-  return `/posts/${timestamp}/${slugify(title.toLowerCase())}`;
+  const parsedTitle = _.chain(title)
+    .replace('(', '')
+    .replace(')', '')
+    .lowerCase()
+    .value();
+  return `/posts/${timestamp}/${slugify(parsedTitle)}`;
 }
 
 export function generateDisplayTimestamp(timestamp) {

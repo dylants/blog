@@ -14,10 +14,16 @@ describe('The posts library', () => {
   });
 
   describe('generatePostUrl', () => {
-    it('should work', () => {
+    it('should work with a simple title', () => {
       should(
         postsLib.generatePostUrl('20160529', 'Some Name of a Post'),
       ).equal('/posts/20160529/some-name-of-a-post');
+    });
+
+    it('should work with a title that has invalid characters', () => {
+      should(
+        postsLib.generatePostUrl('20160529', 'This (post) / is ? bad'),
+      ).equal('/posts/20160529/this-post-is-bad');
     });
   });
 
