@@ -55,12 +55,13 @@ export default function Post() {
 
       <p>
       Let's say we are handed a design that includes a page which lists "widgets" and a page that lists "wockets".  The design for both of these pages is very similar, and includes the following requirements:
-        <ul>
-          <li>Each page will load the initial set of widgets or wockets.</li>
-          <li>The user can load additional widgets or wockets if they choose by clicking the "load more" button.</li>
-          <li>The user can delete a widget or wocket by clicking the "x" button at the top of the widget or wocket.</li>
-        </ul>
       </p>
+
+      <ul>
+        <li>Each page will load the initial set of widgets or wockets.</li>
+        <li>The user can load additional widgets or wockets if they choose by clicking the "load more" button.</li>
+        <li>The user can delete a widget or wocket by clicking the "x" button at the top of the widget or wocket.</li>
+      </ul>
 
       <img src="https://s3.amazonaws.com/dylants-blog/public/images/20160605/widgets_and_wockets.png" alt="" />
 
