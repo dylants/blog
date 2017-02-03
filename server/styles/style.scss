@@ -1,13 +1,17 @@
 @import './swatches';
-$body-breakpoint: 1000px;
+$body-breakpoint: 800px;
 
 body {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   max-width: $body-breakpoint;
+  $body-padding: 10px;
+  $body-padding-breakpoint: $body-breakpoint + ($body-padding * 4);
+  padding: 0 $body-padding;
 
-  @media all and (min-width: $body-breakpoint) {
+  @media all and (min-width: $body-padding-breakpoint) {
     margin: 0 auto;
+    padding: 0;
   }
 }
 
@@ -124,7 +128,8 @@ main {
 
   .title {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 22px;
+    line-height: 26px;
     font-weight: 500;
     text-transform: uppercase;
     color: $swatch02;
@@ -133,13 +138,13 @@ main {
 
   .timestamp {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 14px;
     color: $swatch04;
   }
 
   .sample {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 24px;
     color: $swatch05;
   }
 }
@@ -150,28 +155,34 @@ main {
 section {
   &.post {
     margin-top: 40px;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 24px;
     color: $swatch05;
     margin-bottom: 30px;
 
     h2,
     h3 {
+      font-family: 'Roboto', sans-serif;
       font-weight: 300;
       color: $swatch02;
+      margin-bottom: 0;
     }
 
     h2 {
-      font-size: 24px;
-      line-height: 26px;
+      font-size: 26px;
+      line-height: 28px;
+      margin-top: 30px;
     }
 
     h3 {
-      font-size: 20px;
-      line-height: 22px;
+      font-size: 22px;
+      line-height: 24px;
+      margin-top: 26px;
     }
 
     pre {
+      font-size: 14px;
+
       &.prettyprint {
         padding: 5px;
 
@@ -179,6 +190,10 @@ section {
           padding: 15px;
         }
       }
+    }
+
+    img {
+      max-width: $body-breakpoint;
     }
   }
 }
@@ -193,18 +208,17 @@ section {
   h1 {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 28px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 400;
     color: $swatch02;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 30px;
+    line-height: 32px;
   }
 
   .timestamp {
-    margin-left: 2px;
+    margin-left: 1px;
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 14px;
     color: $swatch04;
   }
 }

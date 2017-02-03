@@ -19,7 +19,7 @@ export default function App({ children }) {
         <link rel="stylesheet" href="/public/prettyprint.css" />
         <link rel="stylesheet" href="/public/style.css" />
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,500" rel="stylesheet" />
 
       </head>

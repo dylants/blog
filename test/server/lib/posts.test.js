@@ -64,17 +64,21 @@ describe('The posts library', () => {
     });
   });
 
-  describe('generateSample', () => {
+  describe('truncateTextFromComponent', () => {
     let sample;
 
     beforeEach(() => {
       // yes, this might break one day.. but until then :)
       const component = postsLib.getPosts()[0];
-      sample = postsLib.generateSample(component.default, component.config.displayTimestamp);
+      sample = postsLib.truncateTextFromComponent(
+        component.default,
+        component.config.displayTimestamp,
+        200,
+      );
     });
 
     it('should return truncated text', () => {
-      should(sample.length).be.belowOrEqual(663);
+      should(sample.length).be.belowOrEqual(200);
     });
 
     it('should end with ellipsis', () => {

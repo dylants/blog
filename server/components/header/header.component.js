@@ -6,8 +6,8 @@ export default function Header() {
     <header>
       <div className="title">
         <Link to="/">
-          <div>Randomness in</div>
-          <div>Code</div>
+          <div>Randomness</div>
+          <div>in Code</div>
         </Link>
       </div>
       <div className="links">

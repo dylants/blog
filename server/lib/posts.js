@@ -31,7 +31,7 @@ export function getPosts() {
   ));
 }
 
-export function generateSample(component, marker) {
+export function truncateTextFromComponent(component, marker, length) {
   // generate the text from the component
   const html = ReactDOMServer.renderToStaticMarkup(component());
   const text = cheerio.load(html).text();
@@ -41,7 +41,11 @@ export function generateSample(component, marker) {
   const parsedText = text.slice(index + marker.length);
 
   return _.truncate(parsedText, {
-    length: 663,
+    length,
     separator: ' ',
   });
+}
+
+export function generateSample(component, marker) {
+  return truncateTextFromComponent(component, marker, 445);
 }
