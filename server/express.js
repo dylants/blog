@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import React from 'react';
-import { renderToString } from 'react-dom/server';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import sassMiddleware from 'node-sass-middleware';
 
@@ -52,7 +52,7 @@ app.get('*', (req, res) => {
     }
 
     // with no errors and no redirects, render the page
-    return res.status(200).send(renderToString(<RouterContext {...renderProps} />));
+    return res.status(200).send(renderToStaticMarkup(<RouterContext {...renderProps} />));
   });
 });
 

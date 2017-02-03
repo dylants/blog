@@ -76,7 +76,7 @@ header {
 
   .link {
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     text-transform: uppercase;
     padding: 0 4%;
@@ -114,11 +114,16 @@ main {
   .imageWrap {
     width: 175px;
     height: 125px;
-    float: left;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-right: 20px;
+    padding-bottom: 20px;
+
+    @media all and (min-width: 450px) {
+      float: left;
+      padding-bottom: 0;
+    }
   }
 
   .image {
