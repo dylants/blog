@@ -117,7 +117,7 @@ users:
       <h2>Configuring npm to use Sinopia</h2>
 
       <p>
-      In npm's world, Sinopia is just another npm registry -- there is no difference in how it responds.  So from the client standpoint, you'll only need to point to this new registry instead of registry.npmjs.org.  To do this, run the command (replacing <code>localhost:4873</code> with the host and port running Sinopia):
+      In npm's world, Sinopia is just another npm registry &mdash; there is no difference in how it responds.  So from the client standpoint, you'll only need to point to this new registry instead of registry.npmjs.org.  To do this, run the command (replacing <code>localhost:4873</code> with the host and port running Sinopia):
       </p>
 
       <pre className="prettyprint prettyprinted">

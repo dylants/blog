@@ -36,7 +36,7 @@ export default function Post() {
       </p>
 
       <p>
-      With this model, each web component is a pairing of a container and a (presentation) component.  The presentation component can be reused across the application, or in other applications -- it simply renders some data.  The container generally has no styling or specific rendering of it's own, it only renders the component.  The container's responsibility is to load the data and/or actions specific to where the component exists in the application.
+      With this model, each web component is a pairing of a container and a (presentation) component.  The presentation component can be reused across the application, or in other applications &mdash; it simply renders some data.  The container generally has no styling or specific rendering of it's own, it only renders the component.  The container's responsibility is to load the data and/or actions specific to where the component exists in the application.
       </p>
 
       <p>
