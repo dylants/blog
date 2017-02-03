@@ -6,6 +6,8 @@ import moment from 'moment';
 import path from 'path';
 import slugify from 'slugify';
 
+import config from '../config';
+
 export function generatePostUrl(timestamp, title) {
   return `/posts/${timestamp}/${slugify(title.toLowerCase())}`;
 }
@@ -47,5 +49,9 @@ export function truncateTextFromComponent(component, marker, length) {
 }
 
 export function generateSample(component, marker) {
-  return truncateTextFromComponent(component, marker, 445);
+  return truncateTextFromComponent(component, marker, config.sampleLength);
+}
+
+export function generateSampleSlim(component, marker) {
+  return truncateTextFromComponent(component, marker, config.sampleSlimLength);
 }
