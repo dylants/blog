@@ -14,7 +14,7 @@ export default function Header() {
         <Link to="/" className="link">Home</Link>
         <a href="https://resume.dylants.com" className="link">Resume</a>
         <a href="https://github.com/dylants" className="link">GitHub</a>
-        <a href="http://www.linkedin.com/in/dylants" className="link">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/dylants" className="link">LinkedIn</a>
       </div>
     </header>
   );

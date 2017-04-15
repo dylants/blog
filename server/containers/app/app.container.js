@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import Header from '../../components/header/header.component';
+import Footer from '../../components/footer/footer.component';
 
 export default function App({ children }) {
   return (
@@ -28,6 +29,7 @@ export default function App({ children }) {
         <Header />
         {children}
 
+        <Footer />
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" />
       </body>
     </html>

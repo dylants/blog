@@ -111,6 +111,14 @@ main {
     }
   }
 
+  a {
+    &:last-child {
+      .post {
+        border-bottom: 0;
+      }
+    }
+  }
+
   .imageWrap {
     width: 175px;
     height: 125px;
@@ -150,7 +158,7 @@ main {
   .sample {
     font-size: 16px;
     line-height: 24px;
-    color: $swatch05;
+    color: $swatch02;
   }
 }
 
@@ -162,7 +170,7 @@ section {
     margin-top: 40px;
     font-size: 16px;
     line-height: 24px;
-    color: $swatch05;
+    color: $swatch02;
     margin-bottom: 30px;
 
     h2,
@@ -206,7 +214,6 @@ section {
 // -------------------------------
 // -------- POST TITLE -----------
 // -------------------------------
-
 .postTitle {
   margin-bottom: 20px;
 
@@ -225,5 +232,27 @@ section {
     margin-top: 10px;
     font-size: 14px;
     color: $swatch04;
+  }
+}
+
+// ---------------------------
+// -------- FOOTER -----------
+// ---------------------------
+footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid $swatch03;
+  padding-top: 8px;
+  margin-bottom: 20px;
+
+  .content {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: $swatch04;
+  }
+
+  .link {
+    margin-left: 4px;
   }
 }
