@@ -30,7 +30,8 @@ export default function App({ children }) {
         {children}
 
         <Footer />
-        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" />
+        {/* documentation: https://github.com/googlearchive/code-prettify */}
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=yaml" />
       </body>
     </html>
   );
