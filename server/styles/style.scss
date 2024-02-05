@@ -8,6 +8,7 @@ body {
   $body-padding: 10px;
   $body-padding-breakpoint: $body-breakpoint + ($body-padding * 4);
   padding: 0 $body-padding;
+  background-color: $swatch05;
 
   @media all and (min-width: $body-padding-breakpoint) {
     margin: 0 auto;
