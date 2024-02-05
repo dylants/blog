@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       My background is on the server side of things, but recently I've been heavily involved in the client side.  And one of the main players in that realm is <a href="http://backbonejs.org/">Backbone.js</a>.  For those who don't know, Backbone attempts to serve as a client side <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC framework</a> but really I believe is more of a library than a framework.  But I believe it's core logic is easy to understand, and not overwhelming for those getting into these client side MVC frameworks, which makes it easy to see why it's become so popular in the community.

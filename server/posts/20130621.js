@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       A while ago, I wrote about how you can use <a href="/posts/20130321/using-travis-continuous-integration-for-your-open-source-project">Travis-CI for your open source project</a>.  And while that works great for open source projects, it's not nearly as <em>free</em> for private repositories as it is for public ones.  So if you have a private GitHub repo, or are using GitHub enterprise at a company, what are you to do?  You could pay for the use of Travis-CI (which I'm sure would be great if you have the option), but if not, there's always <a href="http://jenkins-ci.org/">Jenkins</a>.

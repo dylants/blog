@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <img src="https://s3.amazonaws.com/dylants-blog/public/images/20130321/build_passing.png" alt="build passing" />
 

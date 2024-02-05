@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       One of the coolest things I've learned of recently is <a href="http://pages.github.com/">GitHub Pages</a>.  GitHub hosts most of the world's code by now, and could just sit back and do nothing, but they constantly keep updating and improving things (have you looked at <a href="https://gist.github.com/">Gists</a> recently?).  With GitHub Pages, anything you put in your "gh-pages" branch and upload to GitHub will be hosted on [username].github.com/[repository].  Most have used this for documentation, but if you have an application that only requires static file hosting, then you can host your entire application via GitHub for free.  I'm not recommending you do this for production or anything, but for side projects it's an excellent way to show a running example of the code without requiring the user download and run it locally.

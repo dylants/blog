@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       In the Fall of last year, I picked up <a href="http://backbonejs.org/">Backbone.js</a> with the hopes of writing a couple front end applications to better understand how it worked.  The amount of differences between the client side MVC frameworks and those on the server side turned out to be enough to make me step back, and choose a entry point that would allow me to focus on the very basics of Backbone.  This helped me grasp the bare essentials of the framework, and <a href="/posts/20130110/my-introduction-to-backbone-js-backbone-counter">I wrote about my experiences in an earlier blog post</a>.  But the bare essentials can leave out important features of a framework that require a bit more digging and understanding.  Things that I would argue make this framework great.  So with all of that in mind I set out to write another app which (hopefully) illustrates some of these great features, and would like to go over them here.

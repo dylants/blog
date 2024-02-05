@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       I've been keeping track of <a href="http://emberjs.com/">Ember.js</a> for a while now, and from what the creators have been saying about the technology, it's hard not to if its <a href="http://net.tutsplus.com/articles/interviews/ember-js-core-team-interview/">truly going to be as good of a solution as they've claimed</a>.  Right out of the gate, Ember stresses its a full "top-to-bottom" solution that will address all the edge cases and design needs other frameworks have failed to cover.  And with the current 1.0 release of <a href="http://backbonejs.org/">Backbone.js</a> coming in at <a href="http://backbonejs.org/backbone-min.js">6.3k (minified)</a>, Ember's roughly 8 times larger <a href="https://raw.github.com/emberjs/ember.js/release-builds/ember-1.0.0-rc.1.min.js">49k (minified)</a> package leads one to believe there surely must be so much more to this new (not so little) framework.

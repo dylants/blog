@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       Those who use Node.js at work will sooner or later run into the issue of internal packages.  Yes, you could keep all your internal code within a single project, or yes, you could reference your dependencies as GitHub repos in the <code>package.json</code> file, but neither are very elegant solutions.  Recommended alternatives for this include <a href="https://www.npmjs.org/doc/misc/npm-registry.html">cloning the entire npm repository</a>, or using a proxy, similar to that of <a href="https://www.npmjs.org/package/npm-delegate">npm-delegate</a> or <a href="https://github.com/krakenjs/kappa">Kappa</a>.  In addition, <a href="https://blog.nodejitsu.com/simple-hosted-private-npm-and-registry-nodejitsu-com/">some places will host private npm repositories for you</a>, while <a href="https://speakerdeck.com/seldo/nerdy-pontification-mealtime">npm is working on rolling out private modules</a>, and <a href="https://github.com/npm/npm/issues/5239">others are discussing how npm should handle namespaces</a>.

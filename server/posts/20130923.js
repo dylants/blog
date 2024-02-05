@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       Web applications have been built for years, and Java has often been a top choice as a technology platform. However, the act of using Java to build a web application can feel quite laborious at times with all the duplication and excessive configuration necessary to stand one up. Java EE hasn't had the best reputation for an easily understood web platform, and it's because of this that outside frameworks have emerged attempting to fix this problem. <a href="http://spring.io/">Spring</a> is one of the most popular Java web application frameworks, and provides many (<a href="http://spring.io/projects">many!</a>) useful open source products to make the task of building a Java web application much easier.

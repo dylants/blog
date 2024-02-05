@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <a href="http://nodejs.org/">Node.js</a> has a <a href="https://npmjs.org/">great package manager</a> to manage the dependencies of your Node projects, but what about managing the versions of Node itself? <a href="https://rvm.io/">Ruby has a version manager called RVM</a> that most folks in the community know to use right from the start.  I've installed Node, like most others, using the default installer provided by Node.  This (more than likely) requires sudo access because of where the default install location resides, and additionally will require sudo access when installing packages globally.  And that decision leads to huge confusion initially (see <a href="http://stackoverflow.com/questions/4938592/how-why-does-npm-recommend-not-running-as-root">here</a> and <a href="http://howtonode.org/introduction-to-npm">here</a> and even <a href="http://tnovelli.net/blog/blog.2011-08-27.node-npm-user-install.html">here</a>) because running things blindly with sudo is bad, much like crossing the streams (right Egon?).
 

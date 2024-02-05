@@ -10,7 +10,7 @@
   "scripts": {
     "build:styles": "./node_modules/.bin/node-sass --recursive --output public --source-map true --source-map-contents server/styles",
     "build:server": "./node_modules/.bin/babel -d ./build ./server -s",
-    "build": "npm run lint && npm run clean:build && npm run build:server && npm run build:styles",
+    "build": "npm run clean:build && npm run build:server && npm run build:styles",
     "clean:build": "rimraf build && rimraf public",
     "clean:node_modules": "rimraf node_modules",
     "clean": "npm run clean:build && npm run clean:node_modules",

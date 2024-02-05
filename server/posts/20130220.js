@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       A few of my coworkers have recently shown me <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>, and it's quite amazing.  If you have to make a presentation, the first thing everyone thinks is PowerPoint.  But if we're working in the web why don't we make presentations on the web?  That's where reveal.js comes in, and every time I see a presentation using reveal there's at least one or two people who ask what was used to make it.

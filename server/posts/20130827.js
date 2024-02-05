@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       Most everyone who has developed an application is familiar with logging.  Creating log messages to debug potential problems of the future is a great way to make your life easier.  Figuring out how to effectively handle an ever-increasing log file, and more importantly, know when your customers encounter problems through those logs is a more difficult issue.  As a developer, monitoring your application can be something that does not come naturally, and instead pushed off to an operations team.  However, there are some very useful open source projects available to solve these problems, and wiring up your Java application to take advantage of them has become virtually effortless.

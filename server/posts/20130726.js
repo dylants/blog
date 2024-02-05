@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       Unit tests can be great to verify your source code, but there are times when integration tests provide a more useful report on the stability of your application.  Yes, integration tests (most likely) require more setup than unit tests, and yes, they will (again, most likely) test things outside of the code you wrote.  But they also come with a huge upside in that they test what your customers will use &mdash; the end product stack.  And including integration tests in your continuous integration builds can track how that experience functions over time.  Successful integration tests provide you with a real sense that your application performs correctly from end to end.

@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       <a href="http://lesscss.org/">LESS</a> is a great way to write CSS, allowing you to use variables, nested rules, mixins, and <a href="http://lesscss.org/#synopsis">many other useful features</a>. If nothing else, I think it helps you better organize your CSS. Recently I've been playing around with Node.js, and wanted to use the <a href="https://npmjs.org/package/less-middleware">less-middleware</a> package so that I could easily use LESS within my application. The less-middleware package automatically handles compiling your LESS code to CSS once you have it configured. Configuration is simple if you store you LESS and CSS in the default locations, but I wanted to use different paths for my source and destination directories. <a href="https://npmjs.org/package/less-middleware#readme">The documentation was a little confusing here</a>, so I thought I'd write up what I found.

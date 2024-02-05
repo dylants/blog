@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       I've recently come across two well written blog posts from two separate companies detailing their technology stacks.  Working at a technology company myself, I find these articles fascinating, because they outline decisions and tradeoffs they've had to make along the way.  What's fun is finding some that mirror things you've attempted either within your own company or outside by yourself &mdash; these provide a boost in your overall confidence that maybe we're heading in the right direction after all.  Two such posts come from <a href="http://blog.fogcreek.com/the-trello-tech-stack/">Trello</a> and <a href="http://nerds.airbnb.com/weve-launched-our-first-nodejs-app-to-product">Airbnb</a>.  Both are moving towards a pure JavaScript frontend application using Backbone, but their approaches are a bit different.
