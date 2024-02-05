@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       In web application development, testing the source code to verify it correctly produces the features required is a common practice. Developers will often write tests to validate that the code written satisfies the requirement originally set during the initial design of the feature. This same mindset should exist not just during development, but early in the design of the web application itself, to verify the product is something people actually want. And it doesn't have to stop there &mdash; after the product is launched, testing can continue to gather information on how users interact with the application, what works, what doesn't, and what should be redesigned.

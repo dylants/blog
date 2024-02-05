@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       As I've been using <a href="http://backbonejs.org/">Backbone</a> more and more to create web applications, I've found the need for a security pattern increasingly important. Early on perhaps most of your server side APIs are unsecure, requiring no sort of authentication to access the resources that they expose. But certainly there will be a set of resources at some point which require a layer of security to ensure that not just anyone can access, modify, or delete these resources. On the server side, <a href="http://nodejs.org/">Node</a> provides great libraries to handle this (such as <a href="http://passportjs.org/">Passport</a>), <a href="http://projects.spring.io/spring-security/">Spring dedicated an entire project to security</a>, but what about on the client side? I've gone through a couple iterations on how to handle this myself, and believe to have found a fairly easy and extensible way to manage this in Backbone applications.

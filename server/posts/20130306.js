@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       A debugger for me, is a necessity.  Going back to the days of print statements to debug seems like something I never want to do.  And with debuggers coming a dime a dozen in the Java world, this is really something we must have if switching to run JavaScript on the server.  Chrome's debugger is certainly at the top of the list for client side debugging, and with the <a href="https://github.com/dannycoates/node-inspector">node-inspector</a>, it's possible to use that same environment to debug any Node based app as well.

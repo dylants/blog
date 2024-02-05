@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       Moving logic from the server to the client is becoming more and more common.  But as more moves, the difficulty of keeping everything in sync increases.  Providing REST endpoints on the server side for the clients to consume is a great pattern, however that's more of a <em>pull</em> model than a <em>push</em> model.  If your data is changing but your clients don't know about it, the users are seeing stale information.  Keeping the data updated real-time (or as close to real-time as possible) on the client is then the goal.  And although there are many ways to solve this problem, <a href="http://socket.io/">Socket.IO</a> wraps them up in a nice candy shell while providing a uniform API to use on both the client and the server.

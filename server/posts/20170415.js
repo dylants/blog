@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
         I've been working in the world of client side applications for a while now and have really enjoyed using <a href="https://facebook.github.io/react/">React</a> and <a href="http://redux.js.org/">Redux</a>. Together their simplicity has allowed me to code in a very deterministic fashion, knowing that if my unit tests pass the page will render. Though working solely in the client has some limitations, and since we own the server it feels a waste to not take advantage of it when rendering pages. The most apparent example comes about when any page needs to load data prior to rendering. When the HTTP request hits the server we <i>could</i> load that data. But instead we send back a small HTML skeleton and the JavaScript makes a subsequent request to load the data. It would be great if we could have knowledge of the UI's responsibilities during that initial request to the server.

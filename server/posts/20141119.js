@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       Lately, I've been writing a lot of Angular on the client side and Node on the server side. More specifically, I've been using the <a href="http://meanjs.org/">MEAN.JS</a> template in projects I create, which helps layout a structure to organize the code. Yes, there's a lot of bloat that comes with some of these template projects (and especially with the generators), but once it's all cleaned up and tailored to your project, I think it works very well.

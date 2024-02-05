@@ -20,7 +20,7 @@ export const config = {
 export default function Post() {
   return (
     <section className="post">
-      <PostTitle title={TITLE} timestamp={DISPLAY_TIMESTAMP} />
+      <PostTitle config={config} />
 
       <p>
       Development of any project naturally leads to more and more code as you increase the capabilities of your application.  On the server side, this leads to larger compile/build times, and a larger deliverable to servers which host your code.  But the difference between a 1MB deliverable and a 100MB deliverable is negligible, since the transfer of that application is done internally, and only to those few server machines.  On the client side however, delivery of that application happens each time a user visits your site.  And that initial page render can take quite a long time if the user has to download a huge amount of code.  This can be amplified by the number of HTTP requests needed to download you code, if you've chosen to spread it across multiple files.  Thus a large focus of client side application development is on the <a href="https://en.wikipedia.org/wiki/Minification_(programming)">minification</a> of those delivery assets.
