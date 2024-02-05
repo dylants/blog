@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes } from "react";
 
 export default function PostTitle({ config }) {
   return (
@@ -17,5 +17,5 @@ PostTitle.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     displayTimestamp: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };
