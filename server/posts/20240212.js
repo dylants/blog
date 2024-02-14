@@ -58,13 +58,15 @@ main()
   ...
 
   "prisma": {
-    "seed": "ts-node --compiler-options {\\"module\\":\\"CommonJS\\"} prisma/seed.ts"
+    "seed": "ts-node -r tsconfig-paths/register --compiler-options {\\"module\\":\\"CommonJS\\"} prisma/seed.ts"
   },
 
   ...
 }
 `}
       </pre>
+
+      <p><i>Note the <code>-r tsconfig-paths/register</code> in the command. This is optional, but will include the paths setup in the <code>tsconfig.json</code> file. This is helpful to allow non-relative imports, sometimes seen as <code>"@/..."</code>. See the <a href="https://typestrong.org/ts-node/docs/paths/">documentation on tsconfig-paths</a> for more info.</i></p>
 
       <p>With this in place, you can run the seed script by executing the following command:</p>
 
