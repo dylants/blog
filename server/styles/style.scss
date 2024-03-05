@@ -209,6 +209,11 @@ section {
     img {
       max-width: $body-breakpoint;
     }
+
+    .center {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
