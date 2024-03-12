@@ -5,12 +5,13 @@
   "private": true,
   "license": "MIT",
   "engines": {
-    "node": "6.x"
+    "node": "8.x"
   },
   "scripts": {
-    "build:styles": "./node_modules/.bin/node-sass --recursive --output public --source-map true --source-map-contents server/styles",
     "build:server": "./node_modules/.bin/babel -d ./build ./server -s",
-    "build": "npm run clean:build && npm run build:server && npm run build:styles",
+    "build:styles": "./node_modules/.bin/node-sass --recursive --output public --source-map true --source-map-contents server/styles",
+    "build:ga": "cp server/lib/ga.js public/",
+    "build": "npm run clean:build && npm run build:server && npm run build:styles && npm run build:ga",
     "clean:build": "rimraf build && rimraf public",
     "clean:node_modules": "rimraf node_modules",
     "clean": "npm run clean:build && npm run clean:node_modules",
@@ -49,7 +50,7 @@
     "eslint-plugin-jsx-a11y": "3.0.2",
     "eslint-plugin-react": "6.9.0",
     "mocha": "3.2.0",
-    "node-sass": "4.4.0",
+    "node-sass": "4.14.1",
     "nodemon": "1.11.0",
     "rimraf": "2.5.4",
     "sass-lint": "1.10.2",

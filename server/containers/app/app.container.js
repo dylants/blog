@@ -32,6 +32,9 @@ export default function App({ children }) {
         <Footer />
         {/* documentation: https://github.com/googlearchive/code-prettify */}
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=yaml" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PH3Y914Y0C" />
+        <script src="/public/ga.js" />
       </body>
     </html>
   );
